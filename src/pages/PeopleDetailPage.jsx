@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PeopleDetail from "../components/PeopleDetail";
 
 export default function PeopleDetailPage(props) {
   const id = props.match.params.id;
@@ -18,7 +19,7 @@ export default function PeopleDetailPage(props) {
   return (
     <div>
       People Detail Page
-      {person && <h1>{person.name}</h1>}
+      {person && <PeopleDetail person={person} />}
     </div>
   );
 }
